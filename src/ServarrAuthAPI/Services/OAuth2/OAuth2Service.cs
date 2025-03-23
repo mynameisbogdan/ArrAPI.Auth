@@ -40,6 +40,7 @@ namespace ServarrAuthAPI.Services.OAuth2
 
             _httpClient.DefaultRequestHeaders.AcceptEncoding.Add(new StringWithQualityHeaderValue("gzip"));
             _httpClient.DefaultRequestHeaders.Connection.Add("keep-alive");
+            _httpClient.DefaultRequestHeaders.Add("User-Agent", GetUserAgent());
         }
 
         public Task<OAuth2TokenResponse> GetAuthorizationAsync(string service, string code)
@@ -92,6 +93,11 @@ namespace ServarrAuthAPI.Services.OAuth2
             }
 
             return default;
+        }
+
+        private static string GetUserAgent()
+        {
+            return $"ServarrAuthAPI/{typeof(OAuth2Service).Assembly.GetName().Version}";
         }
     }
 }
