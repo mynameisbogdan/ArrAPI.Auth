@@ -1,12 +1,10 @@
-# Servarr Auth Server
+# Arr Auth Server
 
-[![Build Status](https://dev.azure.com/Servarr/Servarr/_apis/build/status/Servarr.API.Auth?branchName=master)](https://dev.azure.com/Servarr/Servarr/_build/latest?definitionId=2&branchName=master)
-
-This is the auth API of Lidarr, Radarr, and Readarr.
+[![build](https://github.com/mynameisbogdan/ArrAPI.Update/actions/workflows/build.yml/badge.svg)](https://github.com/mynameisbogdan/ArrAPI.Auth/actions/workflows/build.yml)
 
 ## Development
 
-If you want to work on **ServarrAPI.Auth**, make sure you have [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) installed and [Visual Studio 2022](https://www.visualstudio.com/vs).
+If you want to work on **ArrAPI.Auth**, make sure you have [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) installed and [Visual Studio](https://www.visualstudio.com/vs).
 
 ## Using Docker
 
