@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:9.0.308-alpine3.22 AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0.309-alpine3.22 AS build
 ARG TARGETARCH
 ARG VERSION=0.0.0
 ARG BRANCH=unknown
@@ -16,7 +16,7 @@ RUN dotnet publish -c Release \
     src/*.sln
 
 # Runtime stage
-FROM mcr.microsoft.com/dotnet/aspnet:9.0.11-alpine3.22
+FROM mcr.microsoft.com/dotnet/aspnet:9.0.12-alpine3.22
 EXPOSE 5000
 WORKDIR /app
 COPY --from=build /source/build/. ./
