@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:9.0.309-alpine3.22 AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0.310-alpine3.22 AS build
 ARG TARGETARCH
 ARG VERSION=0.0.0
 ARG BRANCH=unknown
