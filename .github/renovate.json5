@@ -25,8 +25,6 @@
       matchManagers: ["github-actions"],
       matchPackageNames: [
         "/^actions\//",
-        "/^github\//",
-        "/^docker\//",
       ],
       group: {
         commitMessageTopic: "{{{groupName}}} group",
