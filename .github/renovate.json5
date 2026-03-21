@@ -6,11 +6,7 @@
     ":disableRateLimiting",
     ":semanticCommits"
   ],
-  dependencyDashboardTitle: "Renovate Dashboard 🤖",
-  enabledManagers: [
-    "dockerfile",
-    "github-actions"
-  ],
+  dependencyDashboardTitle: "Renovate Dashboard",
   schedule: [
     "* * * * 0,6"
   ],
@@ -94,13 +90,5 @@
       matchManagers: ["github-actions"],
       addLabels: ["renovate/github-action"],
     },
-    {
-      enabled: false,
-      matchDatasources: ["docker"],
-      matchPackageNames: [
-        "mcr.microsoft.com/dotnet/**",
-      ],
-      matchUpdateTypes: ["major"],
-    }
   ]
 }
