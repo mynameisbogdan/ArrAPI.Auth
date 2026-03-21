@@ -1,15 +1,11 @@
-version: '2'
 services:
-
-    servarrauth:
-
-        restart: always
-        ports:
-            - "5000:5000"
-
-        environment:
-            - Sentry:Dsn=
-            - Trakt:ClientId=
-            - Trakt:ClientSecret=
-            - Spotify:ClientId=
-            - Spotify:ClientSecret=
+  auth:
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - Sentry:Dsn=
+      - Trakt:ClientId=
+      - Trakt:ClientSecret=
+      - Spotify:ClientId=
+      - Spotify:ClientSecret=

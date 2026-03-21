@@ -20,7 +20,7 @@
     <Product>ServarrAuthAPI</Product>
     <Company>servarr.com</Company>
     <Copyright>Copyright 2017-$([System.DateTime]::Now.ToString('yyyy')) servarr.com (GNU General Public v3)</Copyright>
-    
+
     <!-- Should be replaced by CI -->
     <AssemblyVersion>10.0.0.*</AssemblyVersion>
     <AssemblyConfiguration>$(Configuration)-dev</AssemblyConfiguration>
@@ -28,7 +28,7 @@
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    
+
     <Deterministic Condition="$(AssemblyVersion.EndsWith('*'))">False</Deterministic>
   </PropertyGroup>
 
@@ -62,9 +62,9 @@
   <!-- Set up stylecop -->
   <ItemGroup>
     <!-- StyleCop analysis -->
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+    <PackageReference Include="StyleCop.Analyzers.Unstable" Version="1.2.0.556">
       <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <AdditionalFiles Include="$(SolutionDir)stylecop.json" />
   </ItemGroup>
