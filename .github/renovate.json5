@@ -8,7 +8,7 @@
   ],
   dependencyDashboardTitle: "Renovate Dashboard",
   schedule: [
-    "* * * * 0,6"
+    "* * * * 6"
   ],
   suppressNotifications: [
     "prEditedNotification",
