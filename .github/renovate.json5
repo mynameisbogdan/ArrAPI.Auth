@@ -115,5 +115,11 @@
       matchDatasources: ["nuget"],
       addLabels: ["renovate/nuget"],
     },
+    {
+      description: "Manually approve major version updates for .NET",
+      extends: ["monorepo:dotnet"],
+      matchUpdateTypes: ["major"],
+      dependencyDashboardApproval: true,
+    },
   ]
 }
